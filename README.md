@@ -3,7 +3,7 @@
 # CarRentalApp
  __Important Note: App only supports CHROME and FIREFOX browsers!!!__
 
-<a href="https://car-rental-app-2017.herokuapp.com/" target="_blank">Click here to open this App!</a>
+<a href="https://car-app-amin.herokuapp.com/" target="_blank">Click here to open this App!</a>
 
 Features:
 * Multi-status user management
