@@ -1,0 +1,505 @@
+// Place all the styles related to the Cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pr-0{
+    padding-right: 0px!important;
+}
+.pl-0{
+    padding-left: 0px!important;
+}
+.m-0{
+    margin: 0px!important;
+}
+// a {
+//     color: #06a9f4!important;
+// }
+.f-24, h1 {
+    font-size: 24px!important;
+}
+.navbar-light {
+    background: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid #dfdfdf!important;
+    #logo {
+        color: #333 !important;
+        font-weight: bold;
+    }
+    .navbar-nav > li > a {
+        color: #333;
+        &:hover, &:focus{
+            background: transparent;
+            color: #06a9f4;
+        }
+    }
+    .navbar-toggle .icon-bar {
+        background: #000;
+    }
+    .navbar-header{
+        margin: 0;
+    }
+}
+.btn-primary {
+    color: #fff;
+    background-color: #03a9f4 !important;
+    border-color: #03a9f4 !important;
+}
+.v-align-center{
+    justify-content: center;
+    display: flex;
+    margin: 30px 0;
+}
+.search-section {
+    background:asset_url('bg-main.jpg')  no-repeat center bottom;
+    padding: 60px 0;
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1 {
+        color: #fff;
+        font-weight: bold;
+        margin: 0;
+    }
+    .subtitle {
+        color: #fff;
+        opacity: 0.5;
+        margin-bottom: 30px;
+    }
+    .search-box {
+        padding: 20px;
+        background-color:rgba(0, 0, 0, 0.55);
+        max-width: 80%;
+        border-radius: 5px;
+        input {
+            height: 46px;
+            padding: 6px 12px;
+        }
+        .btn-search {
+            padding: 12px 20px;
+        }
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        text-align: left;
+        padding: 6px 0;
+    }
+    .select2-container--bootstrap .select2-selection--single{
+        height: 46px;
+    }
+
+}
+.select2-container--bootstrap .select2-results__option--highlighted {
+    background-color: #06a9f4!important;
+}
+
+section {
+    padding: 50px 0;
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+}
+.how-it-works {
+    border-bottom: 1px solid #dfdfdf;
+    svg {
+        width: 40px;
+        height: 40px;
+        margin: auto;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    p {
+        padding: 10px 30px;
+        font-size: 12px;
+        opacity: .8;
+    }
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0;
+        padding: 15px;
+    }
+    a {
+        padding-right: 15px;
+        color: #06a9f4;
+    }
+}
+.slider-card {
+    position: relative;
+    padding: 10px;
+    .slide-image {
+        img {
+            border-radius: 5px;
+        }
+    }
+    h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        color: #fff;
+        margin:0
+    }
+    .slider-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3 {
+            position: relative;
+            font-size: 16px;
+            color: #000;
+            margin: 20px 0;
+            transform: none;
+            left: initial;
+        }
+        p {
+            font-size: 12px;
+            margin:0;
+        }
+    }
+}
+.slick-slider {
+   .slick-arrow {
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: 200;
+        top:50%;
+        position: absolute;
+        transform: translate(0,-50%);
+    }
+    .prev-arrow {
+
+        left: -20px;
+    }
+    .next-arrow {
+        right: -20px;
+
+    }
+}
+.slider-container{
+    background: #f5f5f5;
+}
+
+// Login page
+.login-box {
+    background : #fff;
+    padding: 30px;
+    border: 1px solid #dfdfdf;
+    margin-top: 40px;
+    border-radius: 5px;
+    h1 {
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    p {
+        margin-top: 20px;
+    }
+}
+.scheme-section {
+    h1 {
+        margin-bottom: 10px;
+    }
+    .price-tab {
+        background:#fff;
+        border: 1px solid #dfdfdf;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        .card-header {
+            text-align: center;
+            border-bottom: 1px solid #dfdfdf;
+            padding: 20px;
+            h3{
+                font-weight: bold;
+            }
+        }
+        .card-body {
+            padding: 20px;
+            background:#fafafa;
+            ul {
+                padding: 0;
+                list-style: none;
+                margin: 20px 0;
+            }
+        }
+    }
+}
+.customer-review {
+    .customer-card {
+        text-align: center;
+        padding: 30px;
+        img {
+            margin: auto;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+}
+footer {
+    background: #000;
+    padding: 60px 0;
+    color: #fff;
+    margin-top: 50px;
+    h5 {
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 12px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            margin:5px 0;
+        }
+        a {
+            color: #fff;
+            font-size: 12px;
+
+        }
+    }
+    .social-icons {
+        list-style: none;
+        li {
+            display: inline;
+            margin-right: 5px;
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: #fff;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+        }
+
+    }
+    .copyright-text {
+        margin-top: 30px;
+        opacity: .5;
+        text-align: center;
+    }
+}
+
+// test
+.toggle-button-cover
+{
+    margin: 30px 0 50px;
+    position: relative;
+
+}
+
+
+
+
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 120px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+#swithToggle .knobs:before, #swithToggle .knobs:after, #swithToggle .knobs span
+{
+    position: absolute;
+    top: 4px;
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 11px 8px;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+}
+
+#swithToggle .knobs:before
+{
+    content: '';
+    left: 4px;
+    background-color: #03A9F4;
+}
+
+#swithToggle .knobs:after
+{
+    content: 'Year';
+    right: 4px;
+    color: #4e4e4e;
+}
+
+#swithToggle .knobs span
+{
+    display: inline-block;
+    left: 4px;
+    color: #fff;
+    z-index: 1;
+}
+
+#swithToggle .checkbox:checked + .knobs span
+{
+    color: #4e4e4e;
+}
+
+#swithToggle .checkbox:checked + .knobs:before
+{
+    left: 65px;
+}
+
+#swithToggle .checkbox:checked + .knobs:after
+{
+    color: #fff;
+}
+
+// #swithToggle .checkbox:checked ~ .layer
+// {
+//     background-color: #fcebeb;
+// }
+.margin-fix{
+    margin-top: 25px;
+}
+.car_search, .new_car {
+    padding: 30px;
+    background: #f9f9f9;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.table > thead > tr > th {
+    background: #333;
+
+    padding: 10px 10px;
+    color: #fff!important;
+    a {
+        color: #fff!important;
+    }
+}
+.card {
+    border:1px solid #dfdfdf;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.55);
+    border-radius: 5px;
+    .card-header {
+        padding: 15px 30px;
+        border-bottom: 1px solid #dfdfdf;
+        h1 {
+            margin: 0;
+            text-align: left;
+        }
+    }
+    .card-body {
+        padding: 30px;
+    }
+}
+.lead-card {
+    margin: 30px 0;
+
+
+    label {
+        display: block;
+    }
+
+}
+.btn-link {
+    border: 1px solid #dfdfdf!important;
+    border-radius: 5px!important;
+    color: #333!important;
+    &:hover  {
+        text-decoration: none!important;
+        color: #06a9f4!important;
+        background-color: #f5f5f5!important;
+
+    }
+}
+.input-select select {
+    background: #fff;
+    padding: 10px 5px;
+    border:1px solid #dfdfdf;
+    border-radius:5px;
+    font-size: 13px;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #333 !important;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    background-color: #06a9f4 !important;
+    border-color: #06a9f4 !important;
+    color: #fff!important;
+}
+.pagination {
+    display: table!important;
+    margin: 30px auto !important;
+}
+@media (max-width:991px) {
+    .v-align-center{
+        flex-direction: column;
+    }
+    .search-section .search-box{
+        max-width: 100%;
+    }
+    #logo  {
+        font-size: 18px!important;
+        padding: 15px 15px 0!important ;
+    }
+    .search-section .search-box input {
+
+        margin-bottom: 20px;
+    }
+    .select2-container--bootstrap .select2-selection--single{
+        margin-bottom: 20px;
+    }
+    .pr-0 {
+        padding-right: 15px!important;
+    }
+}

@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: 
+  licensePlateNumber: 9F4J1LN,
+  manufacturer: "HERO HONDA MOTORS LTD"
+  model: "model5"
+  hourlyRentalRate: 240.4
+  style: "SUV"
+  location: "67948-9956"
+  status: Available
+# column: value
+#
+# two: {}
+# column: value

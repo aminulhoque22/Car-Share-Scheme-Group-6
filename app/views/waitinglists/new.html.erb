@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card lead-card">
+                <div class="card-header">
+                    <h1>New waitinglist</h1>
+                </div>
+                <div class="card-body">
+                    <%= render 'form', waitinglist: @waitinglist %>
+
+
+                    <%= link_to 'List', waitinglists_path, :class => "btn btn-link" %>
+                    <%= link_to 'Back', :back, :class => "btn btn-link" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,320 @@
+<%- query = {}; query["q"] = {};%>
+<% provide(:title, "Home") %>
+<div class="search-section">
+  <div class="search-holder">
+    <h1>Search a car </h1>
+    <p class="subtitle">Rent your dream car here</p>
+    <div class="search-box container">
+      <%- query["status_cont"]="Available" %>
+      <%= form_tag cars_path, method: :get do %>
+        <% hidden_field_tag "q[status_cont]", 'Available' %>
+        <div class="row">
+          <div class="col-md-3 pr-0">
+            <select class="form-control"  id="from">
+              <option selected disabled>From</option>
+              <option>Cardigan Street </option>
+              <option>Swanston Street</option>
+              <option>Dawson Street</option>
+              <option>Bundoora Campus</option>
+              <option>RAAF William Base Point Cook</option>
+            </select>
+          </div>
+          <div class="col-md-3 pr-0">
+             <select class="form-control"  id="to">
+              <option selected disabled>To</option>
+              <option>Cardigan Street </option>
+              <option>Swanston Street</option>
+              <option>Dawson Street</option>
+              <option>Bundoora Campus</option>
+              <option>RAAF William Base Point Cook</option>
+            </select>
+          </div>
+          <div class="col-md-3 pr-0">
+            <input type="text" class="form-control datepicker" placeholder="Return Date">
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-primary btn-block btn-search">Submit</button>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+
+  <%# <h1>Welcome to Car Rental App  test</h1>
+
+    <h2>Rent your dream car here.</h2> %>
+
+  <%# <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<section class="how-it-works">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>How it Works </h1>
+      </div>
+      <div class="col-md-4 text-center">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350"
+            height="350" viewBox="0 0 350 350" xml:space="preserve">
+            <desc>Created with Fabric.js 1.7.22</desc>
+            <defs>
+            </defs>
+            <g id="icon"
+              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+              transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)">
+              <path
+                d="M 45 1.802 c 16.583 0 30.075 13.491 30.075 30.075 c 0 7.102 -2.538 14.004 -7.145 19.434 L 45 78.317 L 22.07 51.311 c -4.608 -5.43 -7.145 -12.332 -7.145 -19.434 C 14.925 15.294 28.417 1.802 45 1.802 M 45 45.692 c 8.222 0 14.912 -6.689 14.912 -14.912 c 0 -8.222 -6.689 -14.912 -14.912 -14.912 S 30.088 22.557 30.088 30.78 C 30.088 39.002 36.778 45.692 45 45.692 M 45 0 C 27.395 0 13.123 14.272 13.123 31.877 c 0 7.86 2.858 15.043 7.573 20.6 L 45 81.101 l 24.304 -28.624 c 4.716 -5.558 7.573 -12.741 7.573 -20.6 C 76.877 14.272 62.605 0 45 0 L 45 0 z M 45 43.889 c -7.24 0 -13.11 -5.869 -13.11 -13.11 c 0 -7.24 5.869 -13.11 13.11 -13.11 s 13.11 5.869 13.11 13.11 C 58.11 38.02 52.24 43.889 45 43.889 L 45 43.889 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 58.814 71.531 l -1.575 1.575 c 9.772 1.532 15.583 4.707 15.583 7.094 c 0 3.261 -10.838 7.997 -27.822 7.997 S 17.178 83.461 17.178 80.2 c 0 -2.387 5.811 -5.562 15.583 -7.094 l -1.575 -1.575 c -9.401 1.643 -15.81 4.907 -15.81 8.669 c 0 5.412 13.263 9.8 29.625 9.8 c 16.361 0 29.625 -4.388 29.625 -9.8 C 74.625 76.439 68.215 73.174 58.814 71.531 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </svg>
+        </span>
+        <h3>Select Location</h3>
+        <p>Please Select Location</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350"
+            height="350" viewBox="0 0 350 350" xml:space="preserve">
+            <desc>Created with Fabric.js 1.7.22</desc>
+            <defs>
+            </defs>
+            <g id="icon"
+              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+              transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)">
+              <path
+                d="M 82.526 90 H 7.473 c -2.848 0 -5.166 -2.318 -5.166 -5.166 V 32.822 h 85.385 v 52.012 C 87.693 87.682 85.375 90 82.526 90 z M 5.274 35.789 v 49.045 c 0 1.213 0.986 2.199 2.199 2.199 h 75.053 c 1.213 0 2.199 -0.986 2.199 -2.199 V 35.789 H 5.274 z M 50.098 80.943 H 39.902 c -1.882 0 -3.413 -1.531 -3.413 -3.412 V 67.335 c 0 -1.881 1.531 -3.412 3.413 -3.412 h 10.195 c 1.881 0 3.412 1.531 3.412 3.412 v 10.196 C 53.51 79.413 51.979 80.943 50.098 80.943 z M 39.902 66.89 c -0.241 0 -0.446 0.204 -0.446 0.445 v 10.196 c 0 0.241 0.204 0.445 0.446 0.445 h 10.195 c 0.241 0 0.445 -0.204 0.445 -0.445 V 67.335 c 0 -0.241 -0.204 -0.445 -0.445 -0.445 H 39.902 z M 27.101 80.943 H 16.905 c -1.881 0 -3.412 -1.531 -3.412 -3.412 V 67.335 c 0 -1.881 1.531 -3.412 3.412 -3.412 h 10.196 c 1.881 0 3.412 1.531 3.412 3.412 v 10.196 C 30.513 79.413 28.983 80.943 27.101 80.943 z M 16.905 66.89 c -0.241 0 -0.445 0.204 -0.445 0.445 v 10.196 c 0 0.241 0.204 0.445 0.445 0.445 h 10.196 c 0.241 0 0.445 -0.204 0.445 -0.445 V 67.335 c 0 -0.241 -0.204 -0.445 -0.445 -0.445 H 16.905 z M 73.094 60.502 H 62.899 c -1.881 0 -3.412 -1.531 -3.412 -3.412 V 46.894 c 0 -1.882 1.531 -3.413 3.412 -3.413 h 10.195 c 1.882 0 3.413 1.531 3.413 3.413 v 10.195 C 76.507 58.971 74.976 60.502 73.094 60.502 z M 62.899 46.448 c -0.241 0 -0.445 0.205 -0.445 0.446 v 10.195 c 0 0.241 0.204 0.445 0.445 0.445 h 10.195 c 0.241 0 0.446 -0.204 0.446 -0.445 V 46.894 c 0 -0.241 -0.205 -0.446 -0.446 -0.446 H 62.899 z M 50.098 60.502 H 39.902 c -1.882 0 -3.413 -1.531 -3.413 -3.412 V 46.894 c 0 -1.882 1.531 -3.413 3.413 -3.413 h 10.195 c 1.881 0 3.412 1.531 3.412 3.413 v 10.195 C 53.51 58.971 51.979 60.502 50.098 60.502 z M 39.902 46.448 c -0.241 0 -0.446 0.205 -0.446 0.446 v 10.195 c 0 0.241 0.204 0.445 0.446 0.445 h 10.195 c 0.241 0 0.445 -0.204 0.445 -0.445 V 46.894 c 0 -0.241 -0.204 -0.446 -0.445 -0.446 H 39.902 z M 27.101 60.502 H 16.905 c -1.881 0 -3.412 -1.531 -3.412 -3.412 V 46.894 c 0 -1.882 1.531 -3.413 3.412 -3.413 h 10.196 c 1.881 0 3.412 1.531 3.412 3.413 v 10.195 C 30.513 58.971 28.983 60.502 27.101 60.502 z M 16.905 46.448 c -0.241 0 -0.445 0.205 -0.445 0.446 v 10.195 c 0 0.241 0.204 0.445 0.445 0.445 h 10.196 c 0.241 0 0.445 -0.204 0.445 -0.445 V 46.894 c 0 -0.241 -0.204 -0.446 -0.445 -0.446 H 16.905 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 87.693 29.876 H 2.307 V 16.269 c 0 -2.849 2.318 -5.166 5.166 -5.166 h 12.842 V 8.524 c 0 -4.7 3.824 -8.524 8.524 -8.524 c 4.701 0 8.525 3.824 8.525 8.524 v 2.578 h 15.272 V 8.524 C 52.636 3.824 56.46 0 61.16 0 s 8.524 3.824 8.524 8.524 v 2.578 h 12.842 c 2.848 0 5.166 2.318 5.166 5.166 V 29.876 z M 5.274 26.909 h 79.452 v -10.64 c 0 -1.213 -0.986 -2.199 -2.199 -2.199 H 66.718 V 8.524 c 0 -3.065 -2.493 -5.557 -5.557 -5.557 c -3.065 0 -5.557 2.493 -5.557 5.557 v 5.545 H 34.397 V 8.524 c 0 -3.065 -2.493 -5.557 -5.558 -5.557 s -5.557 2.493 -5.557 5.557 v 5.545 H 7.473 c -1.213 0 -2.199 0.987 -2.199 2.199 V 26.909 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </svg>
+        </span>
+        <h3>Pick up /Return Date</h3>
+        <p>Choose PickUp and Return Date </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350"
+            height="350" viewBox="0 0 350 350" xml:space="preserve">
+            <desc>Created with Fabric.js 1.7.22</desc>
+            <defs>
+            </defs>
+            <g id="icon"
+              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+              transform="translate(-1.9444444444444287 -1.9444444444444287) scale(3.89 3.89)">
+              <path
+                d="M 72.114 75.157 c -4.875 0 -8.841 -3.966 -8.841 -8.841 s 3.966 -8.841 8.841 -8.841 s 8.841 3.966 8.841 8.841 S 76.989 75.157 72.114 75.157 z M 72.114 61.476 c -2.669 0 -4.841 2.172 -4.841 4.841 s 2.172 4.841 4.841 4.841 s 4.841 -2.172 4.841 -4.841 S 74.783 61.476 72.114 61.476 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 19.254 75.157 c -4.875 0 -8.841 -3.966 -8.841 -8.841 s 3.966 -8.841 8.841 -8.841 s 8.841 3.966 8.841 8.841 S 24.129 75.157 19.254 75.157 z M 19.254 61.476 c -2.669 0 -4.841 2.172 -4.841 4.841 s 2.172 4.841 4.841 4.841 s 4.841 -2.172 4.841 -4.841 S 21.924 61.476 19.254 61.476 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 85.631 68.617 h -6.676 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 6.676 c 0.203 0 0.369 -0.166 0.369 -0.369 v -8.469 c 0 -0.49 -0.349 -0.916 -0.829 -1.014 l -16.73 -3.394 c -1.083 -0.22 -1.782 -1.275 -1.563 -2.357 s 1.278 -1.782 2.357 -1.563 l 16.731 3.394 C 88.304 51.32 90 53.395 90 55.779 v 8.469 C 90 66.657 88.04 68.617 85.631 68.617 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 65.285 68.617 h -39.2 c -1.104 0 -2 -0.896 -2 -2 s 0.896 -2 2 -2 h 39.2 c 1.104 0 2 0.896 2 2 S 66.39 68.617 65.285 68.617 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 12.413 68.317 c -0.237 0 -0.478 -0.043 -0.713 -0.133 L 1.287 64.21 C 0.512 63.914 0 63.171 0 62.342 V 51.474 c 0 -2.187 1.567 -4.019 3.727 -4.356 l 9.892 -1.552 l 4.876 -4.708 c 2.212 -2.136 4.968 -3.621 7.968 -4.293 c 1.079 -0.241 2.147 0.437 2.389 1.514 c 0.241 1.078 -0.437 2.147 -1.514 2.389 c -2.284 0.512 -4.381 1.642 -6.065 3.267 l -5.331 5.147 c -0.296 0.286 -0.673 0.474 -1.079 0.537 L 4.346 51.068 C 4.146 51.1 4 51.271 4 51.474 v 9.491 l 9.126 3.483 c 1.032 0.394 1.549 1.55 1.155 2.581 C 13.977 67.827 13.218 68.317 12.413 68.317 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 68.837 51.412 c -0.429 0 -0.86 -0.137 -1.225 -0.419 l -7.553 -5.856 c -0.873 -0.677 -1.032 -1.933 -0.355 -2.806 c 0.678 -0.874 1.935 -1.032 2.807 -0.355 l 7.553 5.855 c 0.873 0.677 1.032 1.934 0.355 2.807 C 70.024 51.146 69.434 51.412 68.837 51.412 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 45 53.575 c -0.234 0 -0.467 -0.041 -0.69 -0.123 c -9.256 -3.403 -15.475 -12.973 -15.475 -23.813 v -6.834 c 0 -0.887 0.583 -1.667 1.434 -1.918 c 2.195 -0.647 3.962 -2.414 4.609 -4.609 c 0.251 -0.851 1.032 -1.434 1.918 -1.434 h 16.407 c 0.887 0 1.667 0.583 1.918 1.434 c 0.648 2.195 2.414 3.962 4.61 4.609 c 0.85 0.251 1.434 1.032 1.434 1.918 v 6.834 c 0 10.84 -6.219 20.41 -15.475 23.813 C 45.467 53.534 45.234 53.575 45 53.575 z M 32.834 24.188 v 5.451 c 0 8.75 4.967 16.769 12.166 19.788 c 7.198 -3.019 12.165 -11.037 12.165 -19.788 v -5.451 c -2.373 -1.08 -4.266 -2.973 -5.346 -5.346 H 38.18 C 37.101 21.216 35.208 23.109 32.834 24.188 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 42.687 40.516 c -0.018 0 -0.035 0 -0.053 0 c -0.592 -0.016 -1.147 -0.293 -1.515 -0.757 l -4.024 -5.077 c -0.686 -0.866 -0.541 -2.124 0.325 -2.81 c 0.865 -0.688 2.123 -0.541 2.81 0.325 l 2.539 3.203 l 7.069 -8.012 c 0.73 -0.827 1.995 -0.908 2.823 -0.176 c 0.828 0.73 0.907 1.995 0.177 2.823 l -8.652 9.805 C 43.806 40.27 43.259 40.516 42.687 40.516 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </svg>
+        </span>
+        <h3>Book Your Car</h3>
+
+        <p>Book! Boom</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title">
+        <h1>Popular Pick Up Location</h1>
+      </div>
+      <div class="col-md-12">
+        <div class="slick-slider">
+          <%- Car.where(status: 'Available', style: 'Coupe').limit(5).each.with_index(1) do |car| %>
+            <div>
+              <div class="slider-card">
+                <div class="slide-image">
+                  <%- query["q"]["style_cont"] = 'Coupe' %>
+                  <%= link_to (image_tag "bg-main.jpg", class: 'img-responsive'), cars_path(query)%>
+                </div>
+                <h3><%= car.model%></h3>
+                <div class="slider-content">
+                  <p><%= car.manufacturer%>></p>
+                  <p> <%= car.hourlyRentalRate.round(2)%>/hr</p>
+                </div>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title">
+        <h1>Premimum</h1>
+      </div>
+      <div class="col-md-12">
+        <div class="slick-slider">
+          <%- Car.where(status: 'Available', style: ['Sedan', 'SUV']).limit(5).each.with_index(1) do |car| %>
+            <div>
+              <div class="slider-card">
+                <div class="slide-image">
+                  <%= link_to (image_tag "premimum.jpg", class: 'img-responsive'), cars_path(query["q"]["style_cont"]=>"Sedan")%>
+                </div>
+                <h3><%= car.model%></h3>
+                <div class="slider-content">
+                  <p><%= car.manufacturer%>></p>
+                  <p> <%= car.hourlyRentalRate.round(2)%>/hr</p>
+                </div>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title">
+        <h1>Affordable</h1>
+      </div>
+      <div class="col-md-12">
+        <div class="slick-slider">
+          <%- Car.where(status: 'Available', style: 'Coupe').last(5).each.with_index(1) do |car, index| %>
+            <div>
+              <div class="slider-card">
+                <div class="slide-image">
+                  <%- if index == 1 %>
+                    <%= link_to (image_tag "affordiable.jpg", class: 'img-responsive'), cars_path(query["q"]["style_cont"]=>"Coupe")%>
+                  <%- elsif index == 2 %>
+                    <%= link_to (image_tag "image1.jpg", class: 'img-responsive'), cars_path(query["q"]["style_cont"]=>"Coupe")%>
+                  <%- else %>
+                    <%= link_to (image_tag "image2.jpg", class: 'img-responsive'), cars_path(query["q"]["style_cont"]=>"Coupe")%>
+                  <% end %>
+                </div>
+                <h3><%= car.model%></h3>
+                <div class="slider-content">
+                  <p><%= car.manufacturer%>></p>
+                  <p> <%= car.hourlyRentalRate.round(2)%>/hr</p>
+                </div>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="scheme-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <h1>Our Scheme</h1>
+        <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="toggle-button-cover">
+        </div>
+      </div>
+    </div>
+    <div class="row v-align-center">
+      <div class="col-md-8">
+        <div class="card price-tab">
+          <div class="card-header">
+            <span>Scheme</span>
+          </div>
+          <div class="card-body">
+            <h4>Scheme Benefits</h4>
+            <ul>
+              <li>Helping to improve public transportation and access to care for those in need.</li>
+              <li>Helping businesses move ahead See how  Business help organizations across the world.</li>
+              <li>Opportunity is everywhere, Earning with Us Benefits 1</li>
+              <li>Affordable rides, all to yourself.</li>
+            </ul>
+            <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="customer-reviews">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12 ">
+        <h1>Customer Review</h1>
+      </div>
+      <div class="col-md-12">
+        <div class="customer-review">
+          <div>
+            <div class="customer-card">
+              <div class="slide-image">
+                <%= image_tag "user.jpg" %>
+              </div>
+              <h3>Major Tom</h3>
+              <p class="text-center">Good Ride.</p>
+
+            </div>
+          </div>
+                <div>
+            <div class="customer-card">
+              <div class="slide-image">
+                <%= image_tag "user.jpg" %>
+              </div>
+              <h3>Mr. Vikash</h3>
+              <p class="text-center">Best Ride</p>
+
+            </div>
+          </div>
+                <div>
+            <div class="customer-card">
+              <div class="slide-image">
+                <%= image_tag "user.jpg" %>
+              </div>
+              <h3>Mr. Amez</h3>
+              <p class="text-center">Best Service</p>
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>

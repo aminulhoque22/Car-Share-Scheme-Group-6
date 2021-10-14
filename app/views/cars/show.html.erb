@@ -1,0 +1,62 @@
+<div class="container">
+<% provide(:title, @car.manufacturer+' - '+@car.model) %>
+
+<div class="card lead-card shadow">
+  <div class="card-header">
+    <h1 class="f-24 ">
+      <%= @car.manufacturer %>
+    </h1>
+  </div>
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <%= label_tag "Model" %>
+          <%= @car.model %>
+        </div>
+        <div class="col-md-4 form-group">
+          <%= label_tag "License #" %>
+          <%= @car.licensePlateNumber %>
+        </div>
+        <div class="col-md-4 form-group">
+          <%= label_tag "Hourly Rent Rate" %>
+          <%= '$%.2f per hour' % @car.hourlyRentalRate %>
+        </div>
+        <div class="col-md-4 form-group">
+          <%= label_tag "Car Style" %>
+          <%= @car.style %>
+        </div>
+        <div class="col-md-4 form-group">
+          <%= label_tag "Location" %>
+          <%= @car.location %>
+        </div>
+        <div class="col-md-4 form-group">
+          <%= label_tag "Status" %>
+          <%= @car.status %>
+        </div>
+      </div>
+
+<% if @car.isAvailable? %>
+  <%= link_to 'Reserve', new_reservation_path(:car_id => @car.id), :class => "btn btn-link" %>
+<% elsif !@car.isSuggested? %>
+  <%= link_to 'Add Email Notification', new_waitinglist_path(:car_id => @car.id), :class => "btn btn-link" %>
+<% end %>
+<% if isAdmin? || isSuperAdmin? %>
+  <% if @car.isSuggested? %>
+    <%= link_to 'Approve', edit_car_path(@car), :class => "btn btn-link" %>
+  <% else %>
+    <%= link_to 'Edit', edit_car_path(@car), :class => "btn btn-link" %>
+  <% end %>
+  <%= link_to "Delete", @car, method: :delete, data: { confirm: "Delete this car?" }, :class => "btn btn-link" %>
+<% end %>
+<%= link_to 'List', cars_path, :class => "btn btn-link" %>
+<%= link_to 'Back', :back, :class => "btn btn-link" %>
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="testing-testing"
+          data-description="A month's subscription"
+          data-amount="500"
+          data-locale="aud"></script>
+</div>
+</div>
+
+</div>

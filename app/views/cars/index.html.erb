@@ -1,0 +1,54 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+  <% provide(:title, 'All cars') %>
+  <h1 class="text-left f-24">View and Search cars</h1>
+
+  <%= search_form_for @q_cars do |f| %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.label :location %>
+      <%= f.search_field :location_cont, :class => "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= f.label :manufacturer %>
+      <%= f.collection_select :manufacturer_cont, Car.select("distinct manufacturer"), :manufacturer, :manufacturer, {:include_blank => "Please select car manufacturer"}, { :class => 'form-control' } %>
+     </div>
+         <div class="form-group col-md-4">
+      <%= f.label :model %>
+    <%= f.collection_select :model_cont, Car.select("distinct model"), :model, :model, {:include_blank => "Please select car model"}, { :class => 'form-control' } %>
+      </div>
+          <div class="form-group col-md-4">
+    <%= f.label :style %>
+    <%= f.collection_select :style_cont, Car.styles, :first, :first, {:include_blank => "Please select car style"}, { :class => 'form-control' } %>
+     </div>
+      <div class="form-group col-md-4">
+    <%= f.label :status %>
+    <% if isAdmin? || isSuperAdmin? %>
+      <%= f.collection_select :status_cont, Car.statuses, :first, :first, {:include_blank => "Please select car status"}, { :class => 'form-control' } %>
+       </div>
+          <div class="form-group col-md-4">
+    <% elsif isCustomer? %>
+      <%= f.collection_select :status_cont, Car.statuses.except(:Suggested), :first, :first, {:include_blank => "Please select car status"}, { :class => 'form-control' } %>
+    <% end %>
+      </div>
+         <div class="form-group col-md-4">
+          <%= f.submit "Search", class: "btn btn-primary margin-fix" %>
+     </div>
+      </div>
+  <% end %>
+  <div class="table-responsive">
+    <%= content_tag :table, class: 'table table-bordered table-striped' do %>
+
+      <%= content_tag :thead, display_car_sorted_column_headers(@q_cars), nil, false %>
+      <%= content_tag :tbody, display_car_search_results(@cars), nil, false %>
+    <% end %>
+  </div>
+  <%= will_paginate %>
+
+  </div>
+</div>
+
+
+
+</div>

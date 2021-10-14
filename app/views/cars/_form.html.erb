@@ -1,0 +1,55 @@
+    <%= form_for(@car) do |f| %>
+      <% if @car.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-danger">
+            The form contains <%= pluralize(@car.errors.count, "error") %>.
+          </div>
+          <ul>
+          <% @car.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="form-group col-md-4">
+          <%= f.label :licensePlateNumber %>
+          <%= f.text_field :licensePlateNumber, :class => "form-control" %>
+       </div>
+        <div class="form-group col-md-4">
+          <%= f.label :manufacturer, 'Brand' %>
+          <%= f.text_field :manufacturer, :class => "form-control" %>
+       </div>
+        <div class="form-group col-md-4">
+          <%= f.label :model %>
+          <%= f.text_field :model, :class => "form-control" %>
+      </div>
+
+      <% if isAdmin? || isSuperAdmin? %>
+        <%= f.label :hourlyRentalRate %>
+        <%= f.number_field :hourlyRentalRate, min: 0, step: 0.01, :class => "form-control" %>
+
+      <% elsif isCustomer? %>
+        <%= f.hidden_field :hourlyRentalRate, value: 0, :class => "form-control"  %>
+      <% end %>
+
+      <div class="form-group col-md-4">
+      <%= f.label :style %>
+      <%= f.collection_select :style, Car.styles, :first, :first, {:prompt => "Please select car status"}, {:class => "form-control"} %>
+         </div>
+            <div class="form-group col-md-4">
+      <%= f.label :location %>
+      <%= f.text_field :location, :class => "form-control" %>
+       </div>
+      <% if isAdmin? || isSuperAdmin? %>
+        <%= f.label :status %>
+        <%= f.collection_select :status, Car.statuses, :first, :first, {:prompt => "Please select car status"} %><br>
+      <% elsif isCustomer? %>
+        <%= f.hidden_field :status, value: :Suggested %>
+      <% end %>
+        <div class="form-group col-md-4">
+      <%= f.submit "Submit car info", class: "btn btn-primary margin-fix" %>
+         </div>
+    <% end %>
+      </div>
