@@ -3,7 +3,7 @@
 # CarRentalApp
  __Important Note: App only supports CHROME and FIREFOX browsers!!!__
 
-<a href="https://car-app-amin.herokuapp.com/" target="_blank">Click here to open this App!</a>
+<a href="https://car-rental-app-2017.herokuapp.com/" target="_blank">Click here to open this App!</a>
 
 Features:
 * Multi-status user management
@@ -22,21 +22,21 @@ App Entity-Relationship Diagram
 
 There are one Admin, one SuperAdmin and 100 Customer users shipped along with this app as default (shown in db/seeds.rb file). Any user signed up on the Home page are assigned as Customer status. To add more Admin or SuperAdmin, you should login through the default Admin or SuperAdmin account. Also, this app generate 10 customer samples and 50 car samples inside database to make car rental reservations.
 
-To login as a Customer:
+To login as a Customer: 
 
       Email: example_customer@email.com
       Password: 123456
-
+      
 To login as default Admin:
 
       Email: root_admin@email.com
       Password: 123456
-
+      
 To login as default SuperAdmin:
 
       Email:  root_superadmin@email.com
       Password: 123456
-
+      
 Password of newly created user by Admin account is always "123456".
 
 ### Sign up
@@ -93,7 +93,7 @@ the type of user to be searched in "Role" dropdown list, the click "Search" butt
 name displayed under "Name" column to show detailed information of an user.
 
 #### Manage an user:
-Find the user through above step and click open the link under "Name" field >>> Click "Edit" to show a form with current user information occupied in >>> Modify user information, then click "Submit" Button.
+Find the user through above step and click open the link under "Name" field >>> Click "Edit" to show a form with current user information occupied in >>> Modify user information, then click "Submit" Button. 
 
 Note, the admins have no privilege to delete an admin user, only super admins have the privilege of performing such operation. Also, the program will prevent any user with outstanding checkout from being deleted.
 
@@ -109,7 +109,7 @@ If the current car is not available (checked out, etc) and admin is trying to de
 
 #### Deletion of unavailable users:
 Follow Manage an User above >>> Click on the username under "Name" column >>> Click "Delete";
-If the current user is involved in any active reservation, the admin will not be allowed by the system to delete the user. And it will display an alert message in red about the reason.
+If the current user is involved in any active reservation, the admin will not be allowed by the system to delete the user. And it will display an alert message in red about the reason. 
 
 #### Add new car:
 Click on "Cars" in nav bar to pull down a dropdown >>> Select "Add new car" option >>> Fill in the form of new car's information, then click "Submit car info".
@@ -129,4 +129,23 @@ See Suggest new car above.
 
 ## App Link
 
-[Click here to use this app online!](https://car-app-amin.herokuapp.com/)
+[Click here to use this app online!](https://car-rental-app-2017.herokuapp.com/)
+
+## Team Contributions
+
+Shijie Li (sli41@ncsu.edu)
+
+Wei Sun (wsun12@ncsu.edu)
+
+Leiyang Guo (lguo7@ncsu.edu)
+
+*Please check repo master and branches for details.*
+
+## Reference
+[Rails Guides](http://guides.rubyonrails.org)
+
+[RUBY ON RAILS TUTORIAL](https://www.railstutorial.org)
+
+[Ruby on Rails: Authentication](https://www.codecademy.com/courses/rails-auth/)
+
+[TutorialsPoint: Ruby on Rails Tutorial](https://www.tutorialspoint.com//ruby-on-rails/index.htm)
