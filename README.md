@@ -3,7 +3,7 @@
 # CarRentalApp
  __Important Note: App only supports CHROME and FIREFOX browsers!!!__
 
-<a href="https://car-rental-app-2017.herokuapp.com/" target="_blank">Click here to open this App!</a>
+<a href="https://car-app-amin.herokuapp.com/" target="_blank">Click here to open this App!</a>
 
 Features:
 * Multi-status user management
@@ -129,23 +129,4 @@ See Suggest new car above.
 
 ## App Link
 
-[Click here to use this app online!](https://car-rental-app-2017.herokuapp.com/)
-
-## Team Contributions
-
-Shijie Li (sli41@ncsu.edu)
-
-Wei Sun (wsun12@ncsu.edu)
-
-Leiyang Guo (lguo7@ncsu.edu)
-
-*Please check repo master and branches for details.*
-
-## Reference
-[Rails Guides](http://guides.rubyonrails.org)
-
-[RUBY ON RAILS TUTORIAL](https://www.railstutorial.org)
-
-[Ruby on Rails: Authentication](https://www.codecademy.com/courses/rails-auth/)
-
-[TutorialsPoint: Ruby on Rails Tutorial](https://www.tutorialspoint.com//ruby-on-rails/index.htm)
+[Click here to use this app online!](https://car-app-amin.herokuapp.com/)
